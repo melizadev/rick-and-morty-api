@@ -10,11 +10,11 @@ const Navbar = () => {
     }
   });
   return (
-    <div className="w-full h-[15vh] flex items-center justify-center relative">
-      <div className="container w-full flex items-center justify-between bg-white text-white p-2">
+    <div className="w-full h-[15vh] flex items-center justify-center relative p-2">
+      <div className="container h-full flex items-center justify-between bg-white text-white">
         <div className="flex items-center">
           <Link to="/rick-and-morty-api/">
-            <img src={Logo} alt="" className="w-[250px] jello-horizontal" />
+            <img src={Logo} alt="" className="w-[240px] jello-horizontal" />
           </Link>
         </div>
         <div className="gap-4 text-lg text-neutral-800 font-fredoka hidden sm:flex md:flex lg:flex">

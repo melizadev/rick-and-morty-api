@@ -1,6 +1,5 @@
 import { useFetchData } from "../../hooks/useFetchData";
-import { getLocation } from "../../../Api/locationService";
-
-export function useLocation() {
+import getLocation from "../../../services/getLocation";
+export function useLocations() {
   return useFetchData(getLocation, "locations");
 }

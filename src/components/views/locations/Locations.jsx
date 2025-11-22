@@ -1,10 +1,10 @@
 import SkeletonLocations from "./SkeletonLocations";
 import LocationList from "./LocationsList";
-import { useLocation } from "./useLocation";
+import { useLocations } from "./useLocations";
 import Error from "../../error/Error";
 import { motion, AnimatePresence } from "framer-motion";
 const Locations = () => {
-  const { data, loading, error, retry } = useLocation();
+  const { data, loading, error, retry } = useLocations();
   let content;
   if (loading) {
     content = <SkeletonLocations />;

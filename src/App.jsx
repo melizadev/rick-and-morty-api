@@ -1,10 +1,11 @@
-import Characters from "./components/Characters";
-import Banner from "./components/Banner";
+import Characters from "./components/views/characters/Characters";
+import Banner from "./components/views/banner/Banner";
+import Episodes from "./components/views/episodes/Episodes";
+import Locations from "./components/views/locations/Locations";
+import Footer from "./components/layout/footer/Footer";
+import Navbar from "./components/layout/navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
-import Episodes from "./components/Episodes";
-import Navbar from "./components/Navbar";
-import Locations from "./components/Locations";
+
 function App() {
   return (
     <>

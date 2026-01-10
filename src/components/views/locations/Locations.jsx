@@ -3,6 +3,9 @@ import LocationList from "./LocationsList";
 import { useLocations } from "./useLocations";
 import Error from "../../error/Error";
 import { motion, AnimatePresence } from "framer-motion";
+import lowBg from "../../../assets/low-location.avif";
+import bg from "../../../assets/location.avif";
+import ProgressiveBackground from "../../ui/ProgressiveBg";
 const Locations = () => {
   const { data, loading, error, retry } = useLocations();
   let content;
@@ -15,7 +18,13 @@ const Locations = () => {
   }
 
   return (
-    <div className="w-full min-h-screen  bg-[url('./assets/location.avif')] bg-center bg-cover flex flex-col items-center justify-center p-4 gap-4 bg">
+    <ProgressiveBackground
+      lowSrc={lowBg}
+      src={bg}
+      position="object-center"
+      overlay
+      className="min-h-[80vh] flex items-center"
+    >
       <AnimatePresence mode="wait">
         <motion.div
           key={loading ? "loading" : error ? "error" : "data"}
@@ -28,7 +37,7 @@ const Locations = () => {
           {content}
         </motion.div>
       </AnimatePresence>
-    </div>
+    </ProgressiveBackground>
   );
 };
 export default Locations;

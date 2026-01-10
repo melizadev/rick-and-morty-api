@@ -3,6 +3,9 @@ import { useCharacter } from "./useCharacter";
 import Error from "../../error/Error";
 import { motion, AnimatePresence } from "framer-motion";
 import CharactersList from "./CharactersList";
+import ProgressiveBackground from "../../ui/ProgressiveBg";
+import lowBg from "../../../assets/low-chbg.avif";
+import bg from "../../../assets/chbg.avif";
 
 const Characters = () => {
   const { data, loading, error, retry } = useCharacter();
@@ -15,7 +18,13 @@ const Characters = () => {
     content = <CharactersList data={data} />;
   }
   return (
-    <div className="w-full min-h-[81.7vh] h-full bg-[url('./assets/chbg.avif')] bg-cover bg-[position:center_65%] flex flex-col items-center justify-center gap-4 p-4">
+    <ProgressiveBackground
+      lowSrc={lowBg}
+      src={bg}
+      position="object-center"
+      overlay
+      className="min-h-[80vh] flex items-center"
+    >
       <AnimatePresence mode="wait">
         <motion.div
           key={loading ? "loading" : error ? "error" : "content"}
@@ -28,7 +37,7 @@ const Characters = () => {
           {content}
         </motion.div>
       </AnimatePresence>
-    </div>
+    </ProgressiveBackground>
   );
 };
 

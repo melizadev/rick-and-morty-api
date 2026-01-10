@@ -3,6 +3,9 @@ import EpisodesList from "./EpisodesList";
 import { useEpisodes } from "./useEpisodes";
 import Error from "../../error/Error";
 import { motion, AnimatePresence } from "framer-motion";
+import ProgressiveBackground from "../../ui/ProgressiveBg";
+import bg from "../../../assets/episodes.avif";
+import lowBg from "../../../assets/low-episodes.avif";
 
 const Episodes = () => {
   const { data, error, loading, retry } = useEpisodes();
@@ -17,7 +20,14 @@ const Episodes = () => {
   }
 
   return (
-    <div className="min-h-[81.7vh] h-full w-full bg-[url('./assets/episodes.avif')] bg-center bg-cover flex items-center justify-center">
+    <ProgressiveBackground
+      lowSrc={lowBg}
+      src={bg}
+      position="object-center"
+      overlay
+      className="min-h-[80vh] flex items-center"
+    >
+      {" "}
       <AnimatePresence mode="wait">
         <motion.div
           key={loading ? "loading" : error ? "error" : "data"}
@@ -30,7 +40,7 @@ const Episodes = () => {
           {content}
         </motion.div>
       </AnimatePresence>
-    </div>
+    </ProgressiveBackground>
   );
 };
 

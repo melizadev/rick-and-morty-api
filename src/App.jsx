@@ -3,7 +3,7 @@ import Banner from "./components/views/banner/Banner";
 import Episodes from "./components/views/episodes/Episodes";
 import Locations from "./components/views/locations/Locations";
 import Footer from "./components/layout/footer/Footer";
-import Navbar from "./components/layout/navbar/Navbar";
+import Navbar from "./components/layout/nav-bar/Navbar";
 import { Routes, Route } from "react-router-dom";
 
 function App() {

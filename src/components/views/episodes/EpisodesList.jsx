@@ -2,13 +2,23 @@ import PropTypes from "prop-types";
 const EpisodesList = ({ data }) => {
   return (
     <>
-      <h2 className="text-4xl font-indie font-semibold text-white">
+      <h2
+        className="
+  text-2xl
+  sm:text-3xl
+  md:text-4xl
+  py-3
+  font-indie
+  font-semibold
+  text-white
+"
+      >
         List of Episodes
       </h2>
 
       <div className="lg:w-[80%] md:w-[80%] w-full border-gray-200 rounded-md overflow-hidden shadow-md">
         <table className="w-full">
-          <thead className="bg-gray-200 border-b border-gray-200 rounded-md">
+          <thead className="bg-gray-200/90 border-b border-gray-200 rounded-md">
             <tr>
               <th className="text-gray-700 font-fredoka text-left px-2 py-2">
                 Episode
@@ -22,7 +32,7 @@ const EpisodesList = ({ data }) => {
             {data?.map((episode) => (
               <tr
                 key={episode.id}
-                className="odd:bg-gray-50 even:bg-gray-100 border-b text-gray-700 border-gray-200 hover:bg-gray-200 transition-colors h-[45px]"
+                className="odd:bg-gray-50/90 even:bg-gray-100/90 border-b text-gray-700 border-gray-200 h-[45px]"
               >
                 <td className="w-[20%] font-fredoka p-2">
                   <span className="font-semibold">{episode.name}</span>

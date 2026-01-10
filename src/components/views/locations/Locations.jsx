@@ -20,6 +20,7 @@ const Locations = () => {
   return (
     <ProgressiveBackground
       lowSrc={lowBg}
+      showFullImg={!loading}
       src={bg}
       position="object-center"
       overlay

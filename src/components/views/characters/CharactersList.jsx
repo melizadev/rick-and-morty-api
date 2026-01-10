@@ -7,7 +7,18 @@ const CharactersList = ({ data }) => {
   const { page, setPage, pages, visibleItems } = usePagination(data);
   return (
     <>
-      <h2 className="text-3xl font-indie mb-4 font-semibold text-white">
+      <h2
+        className="
+  text-2xl
+  sm:text-3xl
+  md:text-4xl
+  py-3
+  font-indie
+  font-semibold
+  text-white
+"
+      >
+        {" "}
         Characters
       </h2>
 
@@ -18,7 +29,7 @@ const CharactersList = ({ data }) => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="border border-gray-200 bg-white p-2 rounded shadow-md"
+            className="border border-gray-200 bg-white/90 p-2 rounded shadow-md"
           >
             <h2 className="font-fredoka font-semibold pb-2 text-neutral-700">
               {item.name}
@@ -45,7 +56,7 @@ const CharactersList = ({ data }) => {
           </motion.div>
         ))}
       </div>
-      <div className="flex items-center justify-center gap-3 bg-[#ffffff] p-2 bg-opacity-20 rounded-md mt-4">
+      <div className="flex items-center justify-center gap-3 bg-white/90 p-2 bg-opacity-20 rounded-md mt-4">
         <button
           className="text-white rounded-full disabled:opacity-50 cursor-pointer"
           onClick={() => setPage((p) => Math.max(p - 1, 0))}

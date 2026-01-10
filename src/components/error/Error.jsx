@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const Error = ({ error, retry }) => {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center text-center">
@@ -15,5 +16,10 @@ const Error = ({ error, retry }) => {
     </div>
   );
 };
-
+Error.propTypes = {
+  error: PropTypes.shape({
+    message: PropTypes.string,
+  }),
+  retry: PropTypes.func,
+};
 export default Error;

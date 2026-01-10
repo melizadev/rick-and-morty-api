@@ -18,7 +18,10 @@ const useNavbar = () => {
     return () => window.removeEventListener("keydown", escKey);
   }, []);
 
-  const handleLinkClick = () => setIsOpen(false);
+  const handleLinkClick = () => {
+    if (isOpen) setIsOpen(false);
+    return;
+  };
   return {
     handleLinkClick,
     isOpen,

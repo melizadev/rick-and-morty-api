@@ -5,7 +5,7 @@ const LocationsList = ({ data }) => {
       <h2 className="text-3xl font-indie font-semibold text-gray-50">
         List of Locations
       </h2>
-      <div className="w-full max-w-3xl bg-white rounded-lg shadow-md overflow-x-auto">
+      <div className="w-full max-w-3xl rounded-lg shadow-md">
         <table className="w-full rounded-lg overflow-hidden">
           <thead className="bg-gray-200">
             <tr>

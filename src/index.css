@@ -32,3 +32,17 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  margin-left: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(163, 255, 70, 0.545);
+  border-radius: 10px;
+}
